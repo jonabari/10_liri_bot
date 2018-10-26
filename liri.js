@@ -11,11 +11,11 @@ var moment = require('moment');
 moment().format();
 
 //Global vars
-var userCommand = process.argv[2];
-var userEntry = process.argv[3];
-
 var tomatometer;
 var imdbRating;
+
+var userCommand = process.argv[2];
+var userEntry = process.argv[3];
 
 //userEntry can be multiple words long
 for (var i = 4; i < process.argv.length; i++) {
@@ -107,7 +107,7 @@ var getSpotify = function (songName) {
             var songs = data.tracks.items;
 
             for (let i = 0; i < songs.length; i++) {
-                console.log(i);
+                console.log(i+1);
                 console.log("Artist: " + songs[i].artists[0].name);
                 console.log("Song: " + songs[i].name);
                 console.log("Album: " + songs[i].album.name);
